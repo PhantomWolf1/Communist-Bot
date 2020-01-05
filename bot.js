@@ -26,7 +26,7 @@ bot.on("ready", () => {
   if (message.channel.type == "dm") return;
   if (!message.content.startsWith(prefix)) return;
   if (cmd) {
-    cmd.run(bot, message, args, Discord, con)
+    cmd.run(bot, message, args, Discord)
     console.log(`${message.author.username} used the ${message.content.split(" ")[0]} command.`)
     
   }
