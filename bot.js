@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs = require("fs");
 var prefix = "c!";
+{baselogger} = require('./logger.js');
 
 bot.commands = new Discord.Collection()
 
@@ -28,7 +29,12 @@ bot.on("ready", () => {
   if (cmd) {
     cmd.run(bot, message, args, Discord)
     console.log(`${message.author.username} used the ${message.content.split(" ")[0]} command.`)
-    
+     baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}\n**Guild:** ${message.guild.name}\n**Channel:** ${message.channel.name}`);
+  }
+})
+
+
+
   }
 })
 
