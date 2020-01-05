@@ -34,8 +34,4 @@ bot.on("ready", () => {
 })
 
 
-
-  }
-})
-
 bot.login(process.env.Token)
