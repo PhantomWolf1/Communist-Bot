@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs = require("fs");
 var prefix = "c!";
-{baselogger} = require('./logger.js');
+const {baselogger} = require('./logger.js');
 
 bot.commands = new Discord.Collection()
 
